@@ -11,11 +11,11 @@
         "Added Raw Gold Crushing Recipe - 1 Gold Ore = 1 Raw Gold + 10% chance of additional 2 Raw Gold",
         "Added Raw Iron Crushing Recipe - 1 Iron Ore = 1 Raw Iron + 10% chance of additional 2 Raw Iron",
         "Added Raw Zinc Crushing Recipe - 1 Zinc Ore = 1 Raw Zinc + 10% chance of additional 2 Raw Zinc",
-        "Added Raw Copper Crushing Recipe - 1 Copper Ore = 1 Raw Copper + 10% chance of additional 2 Raw Copper",
         "Added Raw Silver Crushing Recipe - 1 Silver Ore = 1 Raw Silver + 10% chance of additional 2 Raw Silver",
         "Added Emerald Ore Recipe - Count Displayed, 2 prismarine Shards + 2 Amethyst Cluster + 1 Diamond + 1 Sand + 1 multiblock variant + 100 mb Lava", "Heating Required",
         "Added Amethyst Cluster Recipe - 1 Budding Amethyst Block + 1 Amethyst Block + 4 Slime Balls + 4 Amethyst Shards", "Heating Required",
-        "Added Budding Amethyst Block Deployer Recipe - Mode: Use | Item: Axe = 1 Budding Amethyst Block"
+        "Added Budding Amethyst Block Deployer Recipe - Mode: Use | Item: Axe = 1 Budding Amethyst Block",
+        "Added Nether star recipe - 6 Quartz + 4 Ender Pearl + 4 Soul Sand + 3 Wither Skeleton Skulls + 2 Netherite Ingots + 1 Ender Eye"
       ],
       "changed": [
         "Rework - Diamond Ore Recipe - Count Displayed, 16 multiblock variants + 4 Flint + 2 Obsidian + 2 Coal blocks + 4 Charcoal", "Heating Required",

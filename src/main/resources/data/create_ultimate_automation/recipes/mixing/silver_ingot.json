@@ -1,0 +1,26 @@
+
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create_more_additions"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create_more_additions:silver_sheet"
+    },
+    {
+      "fluid": "minecraft:lava",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "item": "create_more_additions:silver_ingot",
+      "count": 1
+    }
+  ],
+  "processingTime": 100
+}
