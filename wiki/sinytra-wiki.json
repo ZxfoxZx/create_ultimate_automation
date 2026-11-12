@@ -1,8 +1,9 @@
+
 {
   "schema": "1",
   "id": "create-ultimate-automation",
   "platforms": {
-    "curseforge": "create-ultimate-automation"
+    "curseforge": "1785371"
   },
   "owners": [
     "zxfoxzx"
