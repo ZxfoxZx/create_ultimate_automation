@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "mysticalagriculture"
+        }
+      ],
+      "recipe": {
+        "type": "create:crushing",
+        "ingredients": [
+          {
+            "item": "minecraft:deepslate_diamond_ore"
+          }
+        ],
+        "results": [
+          {
+            "item": "mysticalagriculture:prosperity_shard",
+            "count": 3,
+            "chance": 0.5
+          },
+          {
+            "item": "minecraft:diamond",
+            "count": 1
+          }
+        ],
+        "processingTime": 200
+      }
+    }
+  ]
+}

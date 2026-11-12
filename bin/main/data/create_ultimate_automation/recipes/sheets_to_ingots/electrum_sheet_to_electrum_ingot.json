@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "createaddition"
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "ingredients": [
+          {
+            "item": "createaddition:electrum_sheet"
+          },
+          {
+            "fluid": "minecraft:lava",
+            "amount": 100
+          }
+        ],
+        "results": [
+          {
+            "item": "createaddition:electrum_ingot",
+            "count": 1
+          }
+        ],
+        "processingTime": 100
+      }
+    }
+  ]
+}

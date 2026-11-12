@@ -1,0 +1,20 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create_more_additions:silver_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_more_additions:raw_silver",
+      "count": 1
+    },
+    {
+      "item": "create_more_additions:raw_silver",
+      "count": 2,
+      "chance": 0.1
+    }
+  ],
+  "processingTime": 200
+}

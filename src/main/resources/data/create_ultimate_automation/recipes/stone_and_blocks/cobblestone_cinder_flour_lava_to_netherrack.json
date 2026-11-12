@@ -1,0 +1,21 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "create:cinder_flour"
+    },
+    {
+      "fluid": "minecraft:lava",
+      "amount": 25
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:netherrack",
+      "count": 1
+    }
+  ]
+}

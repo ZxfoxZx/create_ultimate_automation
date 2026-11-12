@@ -1,0 +1,30 @@
+
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "NNNNN",
+    "NDODN",
+    "NOION",
+    "NDODN",
+    "NNNNN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:netherrack"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "I": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "minecraft:netherite_upgrade_smithing_template",
+    "count": 1
+  },
+  "acceptMirrored": false
+}

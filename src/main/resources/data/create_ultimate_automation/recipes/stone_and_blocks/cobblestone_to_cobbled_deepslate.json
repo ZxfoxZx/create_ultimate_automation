@@ -1,0 +1,15 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone",
+      "count": 4
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:cobbled_deepslate",
+      "count": 1
+    }
+  ]
+}

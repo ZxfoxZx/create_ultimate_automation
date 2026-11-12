@@ -1,0 +1,19 @@
+
+{
+  "type": "create:deploying",
+  "keep_held_item": true,
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_block"
+    },
+    {
+      "tag": "c:axes"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:budding_amethyst",
+      "count": 1
+    }
+  ]
+}

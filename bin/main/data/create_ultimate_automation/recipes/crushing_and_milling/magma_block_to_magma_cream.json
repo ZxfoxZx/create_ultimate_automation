@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:magma_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:magma_cream",
+      "count": 2
+    },
+    {
+      "item": "minecraft:magma_cream",
+      "count": 1,
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 100
+}

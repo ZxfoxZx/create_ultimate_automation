@@ -1,0 +1,104 @@
+
+{
+  "versions": [
+    {
+      "version": "1.0.3tr",
+      "date": "Nov 9, 2026",
+      "added": [
+        "Added Changelog",
+
+        "Added Raw Copper Crushing Recipe - 1 Copper Ore = 1 Raw Copper + 10% chance of additional 2 Raw Copper",
+        "Added Raw Gold Crushing Recipe - 1 Gold Ore = 1 Raw Gold + 10% chance of additional 2 Raw Gold",
+        "Added Raw Iron Crushing Recipe - 1 Iron Ore = 1 Raw Iron + 10% chance of additional 2 Raw Iron",
+        "Added Raw Zinc Crushing Recipe - 1 Zinc Ore = 1 Raw Zinc + 10% chance of additional 2 Raw Zinc",
+        "Added Raw Copper Crushing Recipe - 1 Copper Ore = 1 Raw Copper + 10% chance of additional 2 Raw Copper",
+        "Added Raw Silver Crushing Recipe - 1 Silver Ore = 1 Raw Silver + 10% chance of additional 2 Raw Silver",
+        "Added Emerald Ore Recipe - Count Displayed, 2 prismarine Shards + 2 Amethyst Cluster + 1 Diamond + 1 Sand + 1 multiblock variant + 100 mb Lava", "Heating Required",
+        "Added Amethyst Cluster Recipe - 1 Budding Amethyst Block + 1 Amethyst Block + 4 Slime Balls + 4 Amethyst Shards", "Heating Required",
+        "Added Budding Amethyst Block Deployer Recipe - Mode: Use | Item: Axe = 1 Budding Amethyst Block"
+      ],
+      "changed": [
+        "Rework - Diamond Ore Recipe - Count Displayed, 16 multiblock variants + 4 Flint + 2 Obsidian + 2 Coal blocks + 4 Charcoal", "Heating Required",
+        "Rework - Gilded Blackstone Recipe - Count Displayed, 4 Blackstone + 14 Gold Nuggets + ", "No Heating Required"
+      ],
+      "fixed": [
+        "Recipe balances",
+        "Fixed - Deepslate Diamond Ore"
+      ],
+      "removed": []
+    },
+    {
+      "version": "1.0.2tb",
+      "date": "Nov 7, 2026",
+      "added": [
+        "Ore Automation Recipes",
+        "New - Redstone Ore Recipe: Heating Required 1 multiblock cobblestone + 2 Glowstone dust + 2 Quartz = Redstone Ore",
+        "New - Emerald Ore Recipe: Heating Required 1 multiblock cobblestone + 2 prismarine shard + 2 amethyst cluster + 1 diamond + 1 sand + 100 lava = 1 Emerald Ore",
+        "New - Silver Ore Recipe: Heating Required 1 multiblock cobblestone + 2 iron ingots + 2 quartz = 1 Silver Ore",
+        "New - Ancient Debris: Superheated Required 16 Netherrack + 4 Gold Ingot + 4 Blaze Powder + 150 mb Lava = 1 Ancient Debris",
+        "New - Aluminum Sheet <> Aluminum Ingot (Mixer) aluminum Sheet + 100 mb Lava",
+        "New - Zinc Sheet <> Zinc Ingot (Mixer) Zinc Sheet + 100 mb Lava",
+        "New - Brass Sheet <> Brass Ingot (Mixer) Brass Sheet + 100 mb Lava",
+        "New - Cast Iron Sheet <> Cast Iron Ingot (Mixer) Cast Iron Sheet + 100 mb Lava",
+        "New - Lead Sheet <> Lead Ingot (Mixer) Lead Sheet + 100 mb Lava",
+        "New - Electrum Sheet <> Electrum Ingot (Mixer) Electrum Sheet + 100 mb Lava",
+        "New - Nickel Sheet <> Nickel Ingot (Mixer) Nickel Sheet + 100 mb Lava",
+
+        "Additional Custom Recipes I added",
+        "New - Netherite Upgrade Template (Mechanical Crafter)",
+        "New - Netherite Scrap Recipe (Crushing) 1 Ancient Debris to (100%) Netherite Scrap & (12%) Nether Scrap [Extra]"
+
+      ],
+      "changed": [
+        "Rework - Zinc Ore Recipe: Heating Required 1 multiblock Stone + 2 Iron ingot + 2 Redstone = 1 Zinc Ore",
+        "Rework - Copper Ore Recipe: Heating Required 1 multiblock stone + 2 Red Sand + 2 Redstone = 1 Copper Ore",
+        "Rework - Diamond Ore Recipe: Heating Required 16 multiblock cobblestone + 4 Flint + 2 Obsidian + 2 Coal Blocks + 4 Charcoal = 1 Diamond Ore",
+        "Rework - Deepslate Diamond Ore: Heating Required 8 cobbled Deepslate + 1 Diamond = 1 Deepslate Diamond Ore",
+        "Rework - Gold Ore Recipe: Heating Required 1 multiblock cobblestone + 2 Copper Ingot + 1 Brass ingot + 2 Blaze Powder = 1 Gold Ore",
+        "Rework - Iron Ore Recipe: Heating Required 1 multiblock Cobblestone + 2 Coal + 2 flint = 1 Iron Ore"
+      ],
+      "fixed": [],
+      "removed": []
+    },
+    {
+      "version": "1.0.1",
+      "date": "Nov 6, 2026",
+      "added": [
+        "- New changes will be coming",
+        " in the middle of creating automation for myself, I realized that the zinc recipe wasn't working. So I might have to fix it in the next update. So I will be working toward that soon. Probably today but I want to make the update worth while so I will be adding more recipes for automation on top of it. And If you want me to add specific recipes for certain automation categories, make a comment."
+      ],
+      "changed": [],
+      "fixed": [],
+      "removed": []
+    },
+    {
+      "version": "1.0.0",
+      "date": "Nov 5, 2026",
+      "added": [
+        "Recipes included from - Create: Automate Everything",
+        " - 250 mb of lava can be compacted into a magma block",
+        " - Magma blocks can be frozen into basalt",
+        " - Basalt can be crushed to get 1 blackstone and a 20% chance for a lapis lazuli (Lapis can now be automated)",
+        " - 1 cobblestone, 1 cinder flour, and 25mb of lava can be compressed into 1 netherrack (netherrack + cinder flour can now be automated)",
+        " - 4 gold nuggets, and 1 limestone can be mixed into 1 ochrum",
+        " - 1 cinder flour and 1 cobblestone can be mixed into 1 crimsite (better redstone automation)",
+        " - 1 crimsite and 1 quartz can be mixed into 1 veridium (copper can now be automated)",
+        " - 1 ochrum, 1 veridium, and 1 redstone can be mixed into 2 asurine (zinc can now be automated)",
+        " - 1 magma block can be milled into 2.5 magma cream (magma cream can now be automated)",
+        " - 1 clay block can be compressed into 1 dripstone block (better dripstone automation)",
+        " - 1 dripstone block can be cut into 2 dripstone spikes",
+        " - 1 cobblestone, 1 cobbled deepslate, 1 andesite, 1 diorite, and 1 granite can be mixed to make 16 tuff (another way to automate brass)",
+        " - 4 cobblestone can be compressed into 1 cobbled deepslate",
+
+        "Additional Recipes Added by me",
+        " - Deepslate Diamond Ore Production",
+        " - Prosperity Shard Automation",
+        " - Copper Ore Production",
+        " - Zinc Ore Production"
+      ],
+      "changed": [],
+      "fixed": [],
+      "removed": []
+    }
+  ]
+}

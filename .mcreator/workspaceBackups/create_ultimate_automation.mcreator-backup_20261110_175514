@@ -1,0 +1,47 @@
+{
+  "mod_elements": [],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {}
+  },
+  "metadata": {
+    "files": [
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/createultimateautomation/CreateUltimateAutomationMod.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "create_ultimate_automation",
+    "modName": "Create: Ultimate Automation",
+    "version": "1.0.3r",
+    "description": "https://www.curseforge.com/minecraft/mc-mods/create-ultimate-automation",
+    "author": "IRealtofu, PrimordialSin",
+    "websiteURL": "https://mcreator.net",
+    "license": "MIT License",
+    "serverSideOnly": false,
+    "modPicture": "639294938091820477",
+    "requiredMods": [
+      "create"
+    ],
+    "dependencies": [
+      "createcmo",
+      "tfmg",
+      "mysticalagriculture",
+      "createaddition"
+    ],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.createultimateautomation"
+  },
+  "mcreatorVersion": 202600233518
+}

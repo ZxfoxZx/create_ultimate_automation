@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "tfmg"
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "ingredients": [
+          {
+            "item": "tfmg:lead_sheet"
+          },
+          {
+            "fluid": "minecraft:lava",
+            "amount": 100
+          }
+        ],
+        "results": [
+          {
+            "item": "tfmg:lead_ingot",
+            "count": 1
+          }
+        ],
+        "processingTime": 100
+      }
+    }
+  ]
+}
