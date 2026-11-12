@@ -1,5 +1,6 @@
 # create_ultimate_automation
 Create: Ultimate Automation - expands certain recipes of ores, blocks, and other decorations.
+<<<<<<< HEAD
 // - Hi, my name is Tofu, or you can call me Ryan.
 // I made this mod for the soul purpose of being a alternative to C:AE(Create: Automate Everything)
 
@@ -16,3 +17,5 @@ Create: Ultimate Automation - expands certain recipes of ores, blocks, and other
 
 
 // Thank you for reading all the way to the end. By Tofu
+=======
+>>>>>>> c4e2a033810965401c0811ceed5c4019c1094d88
