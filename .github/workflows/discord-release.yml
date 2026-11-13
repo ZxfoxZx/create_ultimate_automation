@@ -1,0 +1,76 @@
+
+name: Discord Release Announcement
+
+on:
+  workflow_dispatch:
+    inputs:
+      curseforge_url:
+        description: "CurseForge project download page"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository files
+        uses: actions/checkout@v4
+
+      - name: Create Discord announcement
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DOWNLOAD: ${{ inputs.curseforge_url }}
+
+        run: |
+          CHANGELOG="src/main/resources/changelog.json"
+
+          if [ ! -f "$CHANGELOG" ]; then
+            echo "Changelog file not found!"
+            exit 1
+          fi
+
+          jq -e '.versions | type == "array" and length > 0' "$CHANGELOG" > /dev/null
+
+          jq --arg download "$DOWNLOAD" '
+            .versions[0] as $v |
+
+            def section($title; $items):
+              if (($items // []) | length) > 0 then
+                "**\($title)**\n" +
+                (($items // []) | map("• " + .) | join("\n"))
+              else
+                ""
+              end;
+
+            [
+              section("Added"; $v.added),
+              section("Changed"; $v.changed),
+              section("Fixed"; $v.fixed),
+              section("Removed"; $v.removed)
+            ]
+            | map(select(length > 0))
+            | join("\n\n") as $description |
+
+            {
+              embeds: [{
+                title: ("Create: Ultimate Automation " + $v.version),
+                description: ("**Release Date:** " + $v.date + "\n\n" + $description),
+                url: $download,
+                color: 3447003,
+                footer: {
+                  text: "Create: Ultimate Automation"
+                }
+              }]
+            }
+          ' "$CHANGELOG" > discord-payload.json
+
+          curl -fsS \
+            -H "Content-Type: application/json" \
+            --data-binary @discord-payload.json \
+            "$WEBHOOK"
+
+          echo "Discord announcement sent successfully!"
