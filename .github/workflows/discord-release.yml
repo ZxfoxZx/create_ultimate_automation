@@ -10,7 +10,11 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: discord-release-announcement
+  cancel-in-progress: false
 
 jobs:
   discord:
@@ -20,20 +24,33 @@ jobs:
       - name: Get repository files
         uses: actions/checkout@v4
 
-      - name: Create Discord announcement
+      - name: Check version and create announcement
+        id: release
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DOWNLOAD: ${{ inputs.curseforge_url }}
-
         run: |
           CHANGELOG="src/main/resources/changelog.json"
+          LAST_VERSION_FILE=".github/last-announced-version.txt"
 
           if [ ! -f "$CHANGELOG" ]; then
             echo "Changelog file not found!"
             exit 1
           fi
 
-          jq -e '.versions | type == "array" and length > 0' "$CHANGELOG" > /dev/null
+          jq -e '(.versions | type == "array") and (.versions | length > 0)' "$CHANGELOG" > /dev/null
+
+          CURRENT_VERSION=$(jq -r '.versions[0].version' "$CHANGELOG")
+          LAST_VERSION=$(cat "$LAST_VERSION_FILE" 2>/dev/null || true)
+
+          echo "Current version: $CURRENT_VERSION"
+          echo "Previously announced: ${LAST_VERSION:-None}"
+
+          if [ "$CURRENT_VERSION" = "$LAST_VERSION" ]; then
+            echo "Version already announced. Skipping Discord message."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
           jq --arg download "$DOWNLOAD" '
             .versions[0] as $v |
@@ -73,4 +90,22 @@ jobs:
             --data-binary @discord-payload.json \
             "$WEBHOOK"
 
-          echo "Discord announcement sent successfully!"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Save announced version
+        if: steps.release.outputs.skip == 'false'
+        run: |
+          mkdir -p .github
+
+          jq -r '.versions[0].version' \
+            src/main/resources/changelog.json \
+            > .github/last-announced-version.txt
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add .github/last-announced-version.txt
+          git commit -m "Record last announced Discord release"
+          git push
+
+          echo "Last announced version saved successfully!"
