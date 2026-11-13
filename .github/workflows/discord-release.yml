@@ -1,0 +1,57 @@
+
+name: Discord Release Announcement
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Mod version (example: 1.0.4)"
+        required: true
+        type: string
+
+      changelog:
+        description: "Release changelog"
+        required: true
+        type: string
+
+      curseforge_url:
+        description: "CurseForge download page"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Announce release on Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          VERSION: ${{ inputs.version }}
+          NOTES: ${{ inputs.changelog }}
+          DOWNLOAD: ${{ inputs.curseforge_url }}
+
+        run: |
+          PAYLOAD=$(jq -n \
+            --arg version "$VERSION" \
+            --arg notes "$NOTES" \
+            --arg download "$DOWNLOAD" \
+            '{
+              embeds: [{
+                title: ("Create: Ultimate Automation " + $version),
+                description: $notes,
+                url: $download,
+                color: 3447003,
+                footer: {
+                  text: "Create: Ultimate Automation"
+                }
+              }]
+            }')
+
+          curl -fsS \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "$WEBHOOK"
