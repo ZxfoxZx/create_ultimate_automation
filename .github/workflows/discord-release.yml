@@ -4,18 +4,8 @@ name: Discord Release Announcement
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: "Mod version (example: 1.0.4)"
-        required: true
-        type: string
-
-      changelog:
-        description: "Release changelog"
-        required: true
-        type: string
-
       curseforge_url:
-        description: "CurseForge download page"
+        description: "CurseForge project download page"
         required: true
         type: string
 
@@ -27,31 +17,60 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Announce release on Discord
+      - name: Get repository files
+        uses: actions/checkout@v4
+
+      - name: Create Discord announcement
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          VERSION: ${{ inputs.version }}
-          NOTES: ${{ inputs.changelog }}
           DOWNLOAD: ${{ inputs.curseforge_url }}
 
         run: |
-          PAYLOAD=$(jq -n \
-            --arg version "$VERSION" \
-            --arg notes "$NOTES" \
-            --arg download "$DOWNLOAD" \
-            '{
+          CHANGELOG="src/main/resources/changelog.json"
+
+          if [ ! -f "$CHANGELOG" ]; then
+            echo "Changelog file not found!"
+            exit 1
+          fi
+
+          jq -e '.versions | type == "array" and length > 0' "$CHANGELOG" > /dev/null
+
+          jq --arg download "$DOWNLOAD" '
+            .versions[0] as $v |
+
+            def section($title; $items):
+              if (($items // []) | length) > 0 then
+                "**\($title)**\n" +
+                (($items // []) | map("• " + .) | join("\n"))
+              else
+                ""
+              end;
+
+            [
+              section("Added"; $v.added),
+              section("Changed"; $v.changed),
+              section("Fixed"; $v.fixed),
+              section("Removed"; $v.removed)
+            ]
+            | map(select(length > 0))
+            | join("\n\n") as $description |
+
+            {
               embeds: [{
-                title: ("Create: Ultimate Automation " + $version),
-                description: $notes,
+                title: ("Create: Ultimate Automation " + $v.version),
+                description: ("**Release Date:** " + $v.date + "\n\n" + $description),
                 url: $download,
                 color: 3447003,
                 footer: {
                   text: "Create: Ultimate Automation"
                 }
               }]
-            }')
+            }
+          ' "$CHANGELOG" > discord-payload.json
 
           curl -fsS \
             -H "Content-Type: application/json" \
-            -d "$PAYLOAD" \
+            --data-binary @discord-payload.json \
             "$WEBHOOK"
+
+          echo "Discord announcement sent successfully!"
