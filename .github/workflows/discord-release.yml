@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       curseforge_url:
-        description: "CurseForge project download page"
+        description: "CurseForge download page"
         required: true
         type: string
 
