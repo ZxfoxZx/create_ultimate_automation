@@ -1,0 +1,22 @@
+
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:sandstone"
+    },
+    {
+      "item": "create:limestone"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:ochrum",
+      "count": 1
+    }
+  ],
+  "processing_time": 100
+}

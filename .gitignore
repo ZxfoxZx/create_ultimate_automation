@@ -1,0 +1,15 @@
+
+# Gradle
+.gradle/
+build/
+
+# Generated development files
+bin/
+run/
+.eclipse/
+
+# IDE settings
+.vscode/
+
+# MCreator local files
+.mcreator/

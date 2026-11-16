@@ -1,0 +1,21 @@
+
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create:zinc_ore"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:raw_zinc",
+      "count": 1
+    },
+    {
+      "id": "create:raw_zinc",
+      "count": 2,
+      "chance": 0.1
+    }
+  ],
+  "processing_time": 200
+}

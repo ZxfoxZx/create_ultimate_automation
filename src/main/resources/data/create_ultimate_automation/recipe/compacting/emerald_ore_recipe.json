@@ -1,0 +1,39 @@
+
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:amethyst_cluster"
+    },
+    {
+      "item": "minecraft:amethyst_cluster"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:lava",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:emerald_ore",
+      "count": 1
+    }
+  ]
+}

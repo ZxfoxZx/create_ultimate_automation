@@ -1,0 +1,27 @@
+
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_more_additions"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create_more_additions:silver_ore"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_more_additions:raw_silver",
+      "count": 1
+    },
+    {
+      "id": "create_more_additions:raw_silver",
+      "count": 2,
+      "chance": 0.1
+    }
+  ],
+  "processing_time": 200
+}

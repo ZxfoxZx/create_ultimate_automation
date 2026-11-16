@@ -1,0 +1,21 @@
+
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ore"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:raw_gold",
+      "count": 1
+    },
+    {
+      "id": "minecraft:raw_gold",
+      "count": 2,
+      "chance": 0.1
+    }
+  ],
+  "processing_time": 200
+}

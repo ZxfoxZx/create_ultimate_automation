@@ -1,0 +1,21 @@
+
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ore"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:raw_iron",
+      "count": 1
+    },
+    {
+      "id": "minecraft:raw_iron",
+      "count": 2,
+      "chance": 0.1
+    }
+  ],
+  "processing_time": 200
+}

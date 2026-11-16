@@ -1,0 +1,21 @@
+
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create:iron_sheet"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:lava",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:iron_ingot",
+      "count": 1
+    }
+  ],
+  "processing_time": 100
+}

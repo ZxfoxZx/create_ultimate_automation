@@ -1,0 +1,22 @@
+
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create:ochrum"
+    },
+    {
+      "item": "create:veridium"
+    },
+    {
+      "item": "minecraft:dark_prismarine"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:asurine",
+      "count": 2
+    }
+  ],
+  "processing_time": 100
+}

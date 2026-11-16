@@ -1,0 +1,97 @@
+
+{
+  "type": "create:compacting",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "tag": "c:cobblestones"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:coal_block"
+    },
+    {
+      "item": "minecraft:coal_block"
+    },
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:charcoal"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:diamond_ore",
+      "count": 1
+    }
+  ]
+}

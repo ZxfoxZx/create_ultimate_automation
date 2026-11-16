@@ -1,0 +1,69 @@
+
+plugins {
+    id 'eclipse'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = '1.0.3nfp'
+base.archivesName = "create_ultimate_automation"
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = "21.1.232"
+
+    runs {
+        client {
+            client()
+
+            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
+            if (mcreatorJvmOptions) {
+                mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg ->
+                    jvmArgument(arg)
+                }
+            }
+        }
+        server {
+            server()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        mcreator {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+repositories {
+    maven { url = "https://maven.createmod.net" }
+    maven { url = "https://maven.ithundxr.dev/snapshots" }
+}
+
+dependencies {
+    // Create 6.0.10
+    implementation("com.simibubi.create:create-1.21.1:6.0.10-280:slim") {
+        transitive = false
+    }
+
+    // Ponder
+    implementation("net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1")
+
+    // Flywheel
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-1.21.1:1.0.6")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-1.21.1:1.0.6")
+
+    // Registrate
+    implementation("com.tterrag.registrate:Registrate:MC1.21-1.3.0+67")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+apply from: 'mcreator.gradle'

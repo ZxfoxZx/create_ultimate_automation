@@ -1,0 +1,27 @@
+
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createaddition"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createaddition:electrum_sheet"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:lava",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "createaddition:electrum_ingot",
+      "count": 1
+    }
+  ],
+  "processing_time": 100
+}
