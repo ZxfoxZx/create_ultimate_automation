@@ -13,3 +13,4 @@ run/
 
 # MCreator local files
 .mcreator/
+META-INF/neoforge.mods.toml
